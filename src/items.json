@@ -941,7 +941,7 @@
     }
   },
   "weights": {
-    "Adjustment": 1.0,
+    "Adjustment": 1.25,
     "Effect Value": 1.0,
     "Weapon Power": 10.0,
     "Weapon Lifesteal": 2.0,

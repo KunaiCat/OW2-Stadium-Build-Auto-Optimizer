@@ -1,8 +1,8 @@
 """Search bar component for filtering items."""
 import tkinter as tk
-from typing import Callable, List
+from typing import Callable
 from models.category import Category
-from utils.constants import MIN_BUDGET
+from utils.constants import GameConstant
 
 class SearchBar(tk.Frame):
     """Search bar component with category filters and optimization controls."""
@@ -79,7 +79,7 @@ class SearchBar(tk.Frame):
         # Show/hide optimization button based on budget
         try:
             value = int(search_text)
-            if value >= MIN_BUDGET:
+            if value >= GameConstant.MIN_BUDGET:
                 self.find_best_button.pack(side=tk.RIGHT, padx=5)
             else:
                 self.find_best_button.pack_forget()
@@ -103,7 +103,7 @@ class SearchBar(tk.Frame):
         search_text = self.search_var.get().strip()
         try:
             budget = int(search_text)
-            if budget >= MIN_BUDGET:
+            if budget >= GameConstant.MIN_BUDGET:
                 self._optimize()
         except ValueError:
             pass
@@ -112,8 +112,8 @@ class SearchBar(tk.Frame):
         """Handle optimization request."""
         try:
             budget = int(self.search_var.get().strip())
-            if budget < MIN_BUDGET:
-                tk.messagebox.showerror("Error", f"Budget must be at least {MIN_BUDGET}")
+            if budget < GameConstant.MIN_BUDGET:
+                tk.messagebox.showerror("Error", f"Budget must be at least {GameConstant.MIN_BUDGET}")
                 return
             self.on_optimize(budget)
             
@@ -125,7 +125,7 @@ class SearchBar(tk.Frame):
             
         except ValueError:
             tk.messagebox.showerror("Error", 
-                                  f"Please enter a valid integer budget (≥{MIN_BUDGET})")
+                                  f"Please enter a valid integer budget (≥{GameConstant.MIN_BUDGET})")
 
     def _reset(self):
         """Handle reset request."""

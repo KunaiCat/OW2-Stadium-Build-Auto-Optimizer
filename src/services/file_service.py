@@ -2,12 +2,17 @@
 import json
 from typing import Dict, Tuple
 from pathlib import Path
+import os
 
 class FileService:
     """Handles loading and saving data from/to JSON files."""
     
-    def __init__(self, file_path: str = "items.json"):
+    def __init__(self, file_path: str = None):
         """Initialize the file service with the path to the items file."""
+        if file_path is None:
+            # Always use the items.json in the repo root
+            repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            file_path = os.path.join(repo_root, "items.json")
         self.file_path = Path(file_path)
 
     def load_data(self) -> Tuple[Dict, Dict]:
@@ -20,7 +25,11 @@ class FileService:
             if self.file_path.exists():
                 with open(self.file_path, 'r') as f:
                     data = json.load(f)
-                    if isinstance(data, dict) and 'items' in data and 'weights' in data:
+                    if (
+                        isinstance(data, dict)
+                        and 'items' in data
+                        and 'weights' in data
+                    ):
                         return data['items'], data['weights']
                     else:
                         # Old format migration

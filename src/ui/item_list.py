@@ -2,7 +2,7 @@
 import tkinter as tk
 from typing import Dict, Callable, List, Optional
 from models.item import Item
-from utils.constants import CARD_WIDTH, CARD_PADDING, DEFAULT_COLUMNS
+from utils.constants import UIConstant
 
 class ItemList(tk.Frame):
     """Component for displaying items in grid or list view."""
@@ -23,7 +23,7 @@ class ItemList(tk.Frame):
             self.parent_window = self.parent_window.master
         
         # Display state
-        self.current_columns = DEFAULT_COLUMNS
+        self.current_columns = UIConstant.DEFAULT_COLUMNS
         self.edit_mode = False
         self.optimal_items: List[str] = []
         
@@ -215,7 +215,7 @@ class ItemList(tk.Frame):
         # Configure grid columns
         for i in range(self.current_columns):
             rows_frame.grid_columnconfigure(i, weight=1, uniform="col", 
-                                         pad=CARD_PADDING)
+                                         pad=UIConstant.CARD_PADDING)
         
         # Display items in a grid
         for i, (name, item) in enumerate(items):
@@ -225,9 +225,9 @@ class ItemList(tk.Frame):
             
             # Create item frame
             item_frame = tk.Frame(rows_frame, bd=1, relief=tk.GROOVE, 
-                                width=CARD_WIDTH)
-            item_frame.grid(row=row, column=col, padx=CARD_PADDING, 
-                          pady=CARD_PADDING, sticky="nsew")
+                                width=UIConstant.CARD_WIDTH)
+            item_frame.grid(row=row, column=col, padx=UIConstant.CARD_PADDING, 
+                          pady=UIConstant.CARD_PADDING, sticky="nsew")
             item_frame.grid_propagate(False)
             
             # Inner frame for content
@@ -237,7 +237,7 @@ class ItemList(tk.Frame):
             # Name Label
             name_label = tk.Label(content_frame, text=name, 
                                 font=("Arial", 10, "bold"),
-                                anchor="w", wraplength=CARD_WIDTH-12)
+                                anchor="w", wraplength=UIConstant.CARD_WIDTH-12)
             name_label.pack(fill=tk.X, pady=(2, 1))
             
             # Stats frame
@@ -266,7 +266,7 @@ class ItemList(tk.Frame):
             # Effects
             if item.effects.strip():
                 tk.Label(content_frame, text=item.effects, anchor="w",
-                        wraplength=CARD_WIDTH-12).pack(fill=tk.X, pady=(1, 2))
+                        wraplength=UIConstant.CARD_WIDTH-12).pack(fill=tk.X, pady=(1, 2))
             
             # Optional fields
             optional_text = []
@@ -275,7 +275,7 @@ class ItemList(tk.Frame):
                     optional_text.append(f"{field}: {value}")
             if optional_text:
                 tk.Label(content_frame, text=", ".join(optional_text),
-                        anchor="w", wraplength=CARD_WIDTH-12).pack(fill=tk.X, 
+                        anchor="w", wraplength=UIConstant.CARD_WIDTH-12).pack(fill=tk.X, 
                                                                  pady=(0, 2))
 
     def _add_separator(self):
@@ -297,7 +297,7 @@ class ItemList(tk.Frame):
         """
         # Calculate how many columns can fit
         available_width = width - 20  # Reduced padding allowance
-        columns = max(1, min(8, available_width // (CARD_WIDTH + 2 * CARD_PADDING)))
+        columns = max(1, min(8, available_width // (UIConstant.CARD_WIDTH + 2 * UIConstant.CARD_PADDING)))
         
         if columns != self.current_columns:
             self.current_columns = columns

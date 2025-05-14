@@ -4,7 +4,7 @@ from tkinter import ttk, messagebox
 from typing import Dict, Callable, Optional
 from models.item import Item
 from models.category import Category
-from utils.constants import OPTIONAL_FIELDS
+from utils.constants import OptionalField
 from utils.validators import validate_item_input
 
 class ItemEditor(tk.Frame):
@@ -105,7 +105,7 @@ class ItemEditor(tk.Frame):
         options_frame = tk.Frame(bottom_frame)
         options_frame.pack(side=tk.LEFT)
         
-        self.optional_dropdown = ttk.Combobox(options_frame, values=OPTIONAL_FIELDS,
+        self.optional_dropdown = ttk.Combobox(options_frame, values=[f.value for f in OptionalField],
                                             state="readonly", width=20)
         self.optional_dropdown.set("Add field...")
         self.optional_dropdown.pack(side=tk.LEFT, padx=(0, 5))

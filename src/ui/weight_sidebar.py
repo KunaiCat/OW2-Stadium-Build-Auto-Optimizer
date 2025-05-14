@@ -1,7 +1,7 @@
 """Weight sidebar component for adjusting item weights."""
 import tkinter as tk
 from typing import Dict, Callable
-from utils.constants import OPTIONAL_FIELDS
+from utils.constants import OptionalField
 from utils.validators import validate_weight_input, round_to_nearest_fraction
 
 class WeightSidebar(tk.Frame):
@@ -35,7 +35,7 @@ class WeightSidebar(tk.Frame):
         tk.Label(self, text="Weights", font=("Arial", 12, "bold")).pack(pady=5)
         
         # Get all weight fields
-        weight_fields = ['Adjustment', 'Effect Value'] + OPTIONAL_FIELDS
+        weight_fields = ['Adjustment', 'Effect Value'] + [f.value for f in OptionalField]
         
         # Create controls for each weight
         for field in weight_fields:

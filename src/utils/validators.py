@@ -1,7 +1,13 @@
 """Validation utilities for the application."""
 from typing import Tuple, Optional
 
-def validate_item_input(name: str, price: str, adjustment: str, effect_value: str) -> Tuple[bool, Optional[str]]:
+
+def validate_item_input(
+    name: str,
+    price: str,
+    adjustment: str,
+    effect_value: str
+) -> Tuple[bool, Optional[str]]:
     """Validate input values for an item.
     
     Args:
@@ -45,6 +51,7 @@ def validate_item_input(name: str, price: str, adjustment: str, effect_value: st
     
     return True, None
 
+
 def validate_weight_input(value: str) -> Tuple[bool, Optional[float]]:
     """Validate a weight input value.
     
@@ -61,6 +68,7 @@ def validate_weight_input(value: str) -> Tuple[bool, Optional[float]]:
         return True, float_val
     except ValueError:
         return False, None
+
 
 def round_to_nearest_fraction(value: float) -> float:
     """Round a number to the nearest third, quarter, or twentieth.

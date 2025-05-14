@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
-from typing import Dict, Optional
+from typing import Dict
 from .category import Category
+
 
 @dataclass
 class Item:
@@ -21,8 +22,10 @@ class Item:
         """Create an Item instance from a dictionary representation."""
         stats = {}
         for key, value in data.items():
-            if key not in ['Price', 'Adjustment', 'Effect Value', 'Effects', 
-                          'Favorite', 'Category', 'Total Weight', 'weight_per_1k']:
+            if key not in [
+                'Price', 'Adjustment', 'Effect Value', 'Effects',
+                'Favorite', 'Category', 'Total Weight', 'weight_per_1k'
+            ]:
                 stats[key] = value
 
         return cls(
@@ -70,4 +73,6 @@ class Item:
                 total += value * weights[stat]
         
         self.total_weight = round(total, 2)
-        self.weight_per_1k = round((total * 1000) / self.price, 2) if self.price else 0 
+        self.weight_per_1k = (
+            round((total * 1000) / self.price, 2) if self.price else 0
+        ) 

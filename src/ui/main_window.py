@@ -1,6 +1,6 @@
 """Main window component for the application."""
 import tkinter as tk
-from typing import Optional, List
+from typing import List
 from models.category import Category
 from services.item_service import ItemService
 from services.optimizer import OptimizerService
@@ -8,7 +8,7 @@ from ui.search_bar import SearchBar
 from ui.item_list import ItemList
 from ui.item_editor import ItemEditor
 from ui.weight_sidebar import WeightSidebar
-from utils.constants import MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT
+from utils.constants import UIConstant
 
 class MainWindow:
     """Main window of the application."""
@@ -27,7 +27,7 @@ class MainWindow:
         self.root = tk.Tk()
         self.root.title("Item Manager")
         self.root.geometry("1024x800")
-        self.root.minsize(MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT)
+        self.root.minsize(UIConstant.MIN_WINDOW_WIDTH, UIConstant.MIN_WINDOW_HEIGHT)
         
         # Edit mode variable
         self.edit_mode = tk.BooleanVar(value=False)

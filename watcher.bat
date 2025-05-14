@@ -1,0 +1,1 @@
+"C:\Program Files\Python313\python.exe" "C:\Users\melti\Desktop\git\OW2-Stadium-Build-Auto-Optimizer\src\utils\auto_restart.py"
