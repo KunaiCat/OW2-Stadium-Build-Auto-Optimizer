@@ -19,7 +19,8 @@ It's still missing a LOT of features. But imma make a youtube video showing how 
 - Noisy weights
   - Add noise by adjusting every single weight by -10% to +20%.
 - Extra weight on items the user hasn't tried
-- Speed up knacksack algorithm
+- Speed up knapsack algorithm
+- Major refactor to clean out AI garbage
 
 ## Updates/Community/Contact Me
 If you want to join a thriving community discussing Overwatch content/news about this app or speak to me directly [join my discord server](https://discord.gg/Y837qFC2mZ)!
