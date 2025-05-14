@@ -24,7 +24,6 @@ class ItemList(tk.Frame):
         
         # Display state
         self.current_columns = UIConstant.DEFAULT_COLUMNS
-        self.edit_mode = False
         self.optimal_items: List[str] = []
         
         self._setup_ui()
@@ -50,17 +49,6 @@ class ItemList(tk.Frame):
         self.items_frame.bind("<Configure>", self._on_frame_configure)
         self.canvas.bind("<Configure>", self._on_canvas_configure)
         self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
-
-    def set_edit_mode(self, enabled: bool):
-        """Set whether edit mode is enabled.
-        
-        Args:
-            enabled: True to enable edit mode
-        """
-        self.edit_mode = enabled
-        # Call parent's refresh directly to update the display
-        if self.parent_window and hasattr(self.parent_window, '_refresh_display'):
-            self.parent_window._refresh_display()
 
     def set_optimal_items(self, items: Optional[List[str]]):
         """Set the list of optimal items.
@@ -110,97 +98,14 @@ class ItemList(tk.Frame):
             )
         )
         
-        # Display items based on mode
-        if self.edit_mode:
-            # Display optimal items in edit mode
-            if sorted_optimal:
-                self._display_edit_mode(sorted_optimal)
-                if sorted_regular:
-                    self._add_separator()
-            # Display regular items in edit mode
+        # Display optimal items in view mode
+        if sorted_optimal:
+            self._display_view_mode(sorted_optimal)
             if sorted_regular:
-                self._display_edit_mode(sorted_regular)
-        else:
-            # Display optimal items in view mode
-            if sorted_optimal:
-                self._display_view_mode(sorted_optimal)
-                if sorted_regular:
-                    self._add_separator()
-            # Display regular items in view mode
-            if sorted_regular:
-                self._display_view_mode(sorted_regular)
-
-    def _display_edit_mode(self, items):
-        """Display items in edit mode - full width with edit controls.
-        
-        Args:
-            items: List of (name, item) tuples to display
-        """
-        for name, item in items:
-            # Create item frame
-            item_frame = tk.Frame(self.items_frame, bd=1, relief=tk.GROOVE)
-            item_frame.pack(fill=tk.X, pady=10, padx=5)
-            
-            # Name row with Edit button
-            name_frame = tk.Frame(item_frame)
-            name_frame.pack(fill=tk.X, pady=(5, 2), padx=10)
-            
-            # Name label on left
-            name_label = tk.Label(name_frame, text=name, 
-                                font=("Arial", 12, "bold"), anchor="w")
-            name_label.pack(side=tk.LEFT, fill=tk.X, expand=True)
-            
-            # Edit button on right
-            edit_button = tk.Button(name_frame, text="Edit", width=10, height=1,
-                                  command=lambda n=name: self.on_edit(n),
-                                  font=("Arial", 10))
-            edit_button.pack(side=tk.RIGHT, padx=(10, 0))
-            
-            # Stats row
-            stats_frame = tk.Frame(item_frame)
-            stats_frame.pack(fill=tk.X, pady=2, padx=10)
-            
-            stats_text = (f"Price: {item.price}   |   "
-                         f"Adjustment: {item.adjustment}   |   "
-                         f"Effect Value: {item.effect_value}   |   "
-                         f"Total Weight: {item.total_weight:.1f} "
-                         f"(W/kP: {item.weight_per_1k:.1f})")
-            
-            stats_label = tk.Label(stats_frame, text=stats_text, anchor="w")
-            stats_label.pack(fill=tk.X)
-            
-            # Status row
-            status_frame = tk.Frame(item_frame)
-            status_frame.pack(fill=tk.X, pady=2, padx=10)
-            
-            status_text = (f"Category: {item.category}   |   "
-                         f"Favorite: {'Yes' if item.favorite else 'No'}")
-            
-            status_label = tk.Label(status_frame, text=status_text, anchor="w")
-            status_label.pack(fill=tk.X)
-            
-            # Effects row
-            if item.effects.strip():
-                effects_frame = tk.Frame(item_frame)
-                effects_frame.pack(fill=tk.X, pady=2, padx=10)
-                effects_label = tk.Label(effects_frame, 
-                                       text=f"Effects: {item.effects}",
-                                       anchor="w", wraplength=800)
-                effects_label.pack(fill=tk.X)
-            
-            # Optional fields row
-            optional_fields = []
-            for field, value in item.stats.items():
-                if value > 0:
-                    optional_fields.append(f"{field}: {value}")
-            
-            if optional_fields:
-                optional_frame = tk.Frame(item_frame)
-                optional_frame.pack(fill=tk.X, pady=2, padx=10)
-                optional_text = "   |   ".join(optional_fields)
-                optional_label = tk.Label(optional_frame, text=optional_text, 
-                                        anchor="w")
-                optional_label.pack(fill=tk.X)
+                self._add_separator()
+        # Display regular items in view mode
+        if sorted_regular:
+            self._display_view_mode(sorted_regular)
 
     def _display_view_mode(self, items):
         """Display items in view mode - responsive grid layout.
@@ -234,11 +139,17 @@ class ItemList(tk.Frame):
             content_frame = tk.Frame(item_frame)
             content_frame.pack(fill=tk.BOTH, expand=True, padx=6, pady=3)
             
-            # Name Label
-            name_label = tk.Label(content_frame, text=name, 
+            # Name Label (left) and Edit button (right)
+            name_row = tk.Frame(content_frame)
+            name_row.pack(fill=tk.X)
+            name_label = tk.Label(name_row, text=name, 
                                 font=("Arial", 10, "bold"),
-                                anchor="w", wraplength=UIConstant.CARD_WIDTH-12)
-            name_label.pack(fill=tk.X, pady=(2, 1))
+                                anchor="w", wraplength=UIConstant.CARD_WIDTH-48)
+            name_label.pack(side=tk.LEFT, fill=tk.X, expand=True)
+            edit_button = tk.Button(name_row, text="Edit", width=7, height=1,
+                                  command=lambda n=name: self.on_edit(n),
+                                  font=("Arial", 9))
+            edit_button.pack(side=tk.RIGHT, padx=(6, 0))
             
             # Stats frame
             stats_frame = tk.Frame(content_frame)

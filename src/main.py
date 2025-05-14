@@ -3,7 +3,7 @@ import subprocess
 from services.file_service import FileService
 from services.item_service import ItemService
 from services.optimizer import OptimizerService
-from ui.main_window import MainWindow
+from ui.main_menu import MainMenu
 
 
 def ensure_requirements():
@@ -25,8 +25,8 @@ def main():
     optimizer_service = OptimizerService()
     
     # Create and run main window
-    window = MainWindow(item_service, optimizer_service)
-    window.run()
+    app = MainMenu(item_service, optimizer_service)
+    app.run()
 
 
 if __name__ == "__main__":
