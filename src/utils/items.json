@@ -1,0 +1,21 @@
+{
+  "items": {},
+  "weights": {
+    "Adjustment": 2.0,
+    "Effect Value": 1.0,
+    "Weapon Power": 1.0,
+    "Weapon Lifesteal": 3.25,
+    "Attack Speed": 1.0,
+    "Reload Speed": 1.0,
+    "Move Speed": 1.0,
+    "Critical Damage": 1.0,
+    "Melee Damage": 1.0,
+    "Max Ammo": 1.0,
+    "Cooldown Reduction": 1.0,
+    "Ability Power": 1.0,
+    "Ability Lifesteal": 1.0,
+    "Armor": 1.0,
+    "Shields": 1.0,
+    "Health": 1.0
+  }
+}
