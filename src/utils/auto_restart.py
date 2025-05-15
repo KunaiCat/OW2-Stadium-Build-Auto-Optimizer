@@ -4,7 +4,8 @@ import time
 import os
 import subprocess
 import psutil
-from threading import Timer
+from threading import Timer, Thread, Event
+import select
 
 def get_src_dir():
     """Get the src directory path, handling both direct execution and import cases."""
@@ -58,15 +59,34 @@ class FileWatcher:
         return False
     
     def schedule_restart(self):
-        """Schedule a restart after 15 seconds"""
+        """Schedule a restart after 15 seconds, with countdown and Enter-to-skip."""
         # Cancel any existing scheduled restart
         if self.restart_timer:
             self.restart_timer.cancel()
-        
-        # Schedule new restart
-        print("\nWaiting 15 seconds for changes to settle...")
-        self.restart_timer = Timer(15.0, self.restart_app)
-        self.restart_timer.start()
+
+        print("\nWaiting 15 seconds for changes to settle... (press Enter to reload immediately)")
+        skip_event = Event()
+
+        def wait_for_enter():
+            # Use select for non-blocking input
+            while not skip_event.is_set():
+                if sys.stdin in select.select([sys.stdin], [], [], 1)[0]:
+                    _ = sys.stdin.readline()
+                    skip_event.set()
+                    break
+
+        def countdown_and_restart():
+            for i in range(14, 0, -1):
+                if skip_event.is_set():
+                    break
+                print(i)
+                time.sleep(1)
+            skip_event.set()
+            self.restart_app()
+
+        # Start both threads
+        Thread(target=wait_for_enter, daemon=True).start()
+        Thread(target=countdown_and_restart, daemon=True).start()
     
     def restart_app(self):
         """Restart the UI application"""

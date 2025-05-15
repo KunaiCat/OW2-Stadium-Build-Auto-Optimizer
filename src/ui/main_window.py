@@ -94,7 +94,7 @@ class MainWindow:
         self.sidebar.pack(side=tk.RIGHT, fill=tk.Y, padx=2, pady=2)
         
         # Initialize weights
-        for field, value in self.item_service.weights.items():
+        for field, value in self.item_service.output_weights.items():
             self.sidebar.set_weight(field, value)
 
     def _refresh_display(self):

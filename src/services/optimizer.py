@@ -14,24 +14,25 @@ class OptimizerService:
         budget: int,
         items: Dict[str, Item]
     ) -> Tuple[List[str], int, float]:
-        """Find the optimal combination of items within the given budget.
-
-        Args:
-            budget: Maximum total price
-            items: Dictionary of available items
-
-        Returns:
-            Tuple containing:
-            - List of selected item names
-            - Total price of selected items
-            - Total weight of selected items
+        """Interface for finding the optimal combination of items within the given budget.
+        This delegates to the actual implementation, which can be swapped for a faster version later.
         """
+        return OptimizerService._find_optimal_items_backtrack(budget, items)
+
+    @staticmethod
+    def _find_optimal_items_backtrack(
+        budget: int,
+        items: Dict[str, Item]
+    ) -> Tuple[List[str], int, float]:
+        """Original backtracking implementation for finding optimal items."""
+        print(f"Finding optimal items with budget {budget}")
         # Convert items to list and sort by weight per 1000 price (efficiency)
         items_list = [
             (name, item.price, item.total_weight)
             for name, item in items.items()
         ]
         items_list.sort(key=lambda x: x[2] / x[1], reverse=True)
+        print(f"Sorted {len(items_list)} items by efficiency")
 
         # Track best combination found
         best_combination = []
@@ -44,14 +45,7 @@ class OptimizerService:
             current_price: int,
             current_weight: float
         ) -> None:
-            """Recursive backtracking to find optimal combination.
-
-            Args:
-                start_idx: Starting index in sorted items list
-                current_items: Currently selected items
-                current_price: Total price of current selection
-                current_weight: Total weight of current selection
-            """
+            """Recursive backtracking to find optimal combination."""
             nonlocal best_combination, best_weight, best_price
 
             # Update best if current is better
@@ -59,6 +53,8 @@ class OptimizerService:
                 best_combination = current_items.copy()
                 best_weight = current_weight
                 best_price = current_price
+                print(f"Found better combination: {best_combination}")
+                print(f"Weight: {best_weight}, Price: {best_price}")
 
             # Stop if we've reached the end or max items
             if (
@@ -86,6 +82,7 @@ class OptimizerService:
                 current_items.pop()
 
         # Start the backtracking search
+        print("Starting backtracking search...")
         backtrack(0, [], 0, 0)
-
+        print(f"Search complete. Found {len(best_combination)} items.")
         return best_combination, best_price, best_weight 

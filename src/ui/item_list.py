@@ -2,7 +2,7 @@
 import tkinter as tk
 from typing import Dict, Callable, List, Optional
 from models.item import Item
-from utils.constants import UIConstant
+from utils.constants import UIConstant, Style
 
 class ItemList(tk.Frame):
     """Component for displaying items in grid or list view."""
@@ -14,7 +14,7 @@ class ItemList(tk.Frame):
             parent: Parent widget
             on_edit: Callback for when an item is selected for editing
         """
-        super().__init__(parent)
+        super().__init__(parent, **Style.FRAME_NORMAL)
         self.on_edit = on_edit
         
         # Find parent window
@@ -30,25 +30,9 @@ class ItemList(tk.Frame):
 
     def _setup_ui(self):
         """Set up the UI components."""
-        # Canvas for scrolling
-        self.canvas = tk.Canvas(self)
-        self.scrollbar = tk.Scrollbar(self, orient=tk.VERTICAL, 
-                                    command=self.canvas.yview)
-        self.canvas.configure(yscrollcommand=self.scrollbar.set)
-        
-        self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        
         # Frame to hold items
-        self.items_frame = tk.Frame(self.canvas)
-        self.canvas_frame = self.canvas.create_window((0, 0), 
-                                                    window=self.items_frame, 
-                                                    anchor="nw")
-        
-        # Configure canvas
-        self.items_frame.bind("<Configure>", self._on_frame_configure)
-        self.canvas.bind("<Configure>", self._on_canvas_configure)
-        self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
+        self.items_frame = tk.Frame(self, **Style.FRAME_NORMAL)
+        self.items_frame.pack(fill=tk.BOTH, expand=True)
 
     def set_optimal_items(self, items: Optional[List[str]]):
         """Set the list of optimal items.
@@ -65,11 +49,14 @@ class ItemList(tk.Frame):
         Args:
             items: Dictionary of items to display
         """
+        print(f"ItemList display_items called with {len(items)} items")
         # Clear existing items
         for widget in self.items_frame.winfo_children():
             widget.destroy()
+        print("Cleared existing items")
         
         if not items:
+            print("No items to display")
             return
             
         # Split items into optimal and regular
@@ -81,6 +68,8 @@ class ItemList(tk.Frame):
                 optimal_items[name] = item
             else:
                 regular_items[name] = item
+        
+        print(f"Split into {len(optimal_items)} optimal and {len(regular_items)} regular items")
         
         # Sort optimal items by weight per 1000 price
         sorted_optimal = sorted(
@@ -100,12 +89,16 @@ class ItemList(tk.Frame):
         
         # Display optimal items in view mode
         if sorted_optimal:
+            print("Displaying optimal items")
             self._display_view_mode(sorted_optimal)
             if sorted_regular:
                 self._add_separator()
         # Display regular items in view mode
         if sorted_regular:
+            print("Displaying regular items")
             self._display_view_mode(sorted_regular)
+        
+        print(f"Final items frame children: {self.items_frame.winfo_children()}")
 
     def _display_view_mode(self, items):
         """Display items in view mode - responsive grid layout.
@@ -113,8 +106,9 @@ class ItemList(tk.Frame):
         Args:
             items: List of (name, item) tuples to display
         """
+        print(f"_display_view_mode called with {len(items)} items")
         # Create a frame to hold rows
-        rows_frame = tk.Frame(self.items_frame)
+        rows_frame = tk.Frame(self.items_frame, **Style.FRAME_NORMAL)
         rows_frame.pack(fill=tk.BOTH, expand=True)
         
         # Configure grid columns
@@ -124,60 +118,71 @@ class ItemList(tk.Frame):
         
         # Display items in a grid
         for i, (name, item) in enumerate(items):
+            print(f"Creating card for item {name}")
             # Calculate grid position
             row = i // self.current_columns
             col = i % self.current_columns
             
             # Create item frame
             item_frame = tk.Frame(rows_frame, bd=1, relief=tk.GROOVE, 
-                                width=UIConstant.CARD_WIDTH)
+                                width=UIConstant.CARD_WIDTH,
+                                bg=Style.BG_DARKER)
             item_frame.grid(row=row, column=col, padx=UIConstant.CARD_PADDING, 
                           pady=UIConstant.CARD_PADDING, sticky="nsew")
             item_frame.grid_propagate(False)
             
             # Inner frame for content
-            content_frame = tk.Frame(item_frame)
+            content_frame = tk.Frame(item_frame, **Style.FRAME_NORMAL)
             content_frame.pack(fill=tk.BOTH, expand=True, padx=6, pady=3)
             
             # Name Label (left) and Edit button (right)
-            name_row = tk.Frame(content_frame)
+            name_row = tk.Frame(content_frame, **Style.FRAME_NORMAL)
             name_row.pack(fill=tk.X)
+            
+            # Create a modified style without font
+            label_style = {k: v for k, v in Style.LABEL_NORMAL.items() if k != 'font'}
             name_label = tk.Label(name_row, text=name, 
                                 font=("Arial", 10, "bold"),
-                                anchor="w", wraplength=UIConstant.CARD_WIDTH-48)
+                                anchor="w", wraplength=UIConstant.CARD_WIDTH-48,
+                                **label_style)
             name_label.pack(side=tk.LEFT, fill=tk.X, expand=True)
+            
+            # Create a modified style without font
+            btn_style = {k: v for k, v in Style.BTN_NORMAL.items() if k != 'font'}
             edit_button = tk.Button(name_row, text="Edit", width=7, height=1,
                                   command=lambda n=name: self.on_edit(n),
-                                  font=("Arial", 9))
+                                  font=("Arial", 9),
+                                  **btn_style)
             edit_button.pack(side=tk.RIGHT, padx=(6, 0))
             
             # Stats frame
-            stats_frame = tk.Frame(content_frame)
+            stats_frame = tk.Frame(content_frame, **Style.FRAME_NORMAL)
             stats_frame.pack(fill=tk.X)
             tk.Label(stats_frame, text=f"P: {item.price}", 
-                    anchor="w").pack(side=tk.LEFT)
+                    anchor="w", **label_style).pack(side=tk.LEFT)
             tk.Label(stats_frame, text=f"A: {item.adjustment}", 
-                    anchor="w").pack(side=tk.LEFT, padx=(6, 0))
+                    anchor="w", **label_style).pack(side=tk.LEFT, padx=(6, 0))
             tk.Label(stats_frame, text=f"W: {item.total_weight:.1f}", 
-                    anchor="w").pack(side=tk.LEFT, padx=(6, 0))
+                    anchor="w", **label_style).pack(side=tk.LEFT, padx=(6, 0))
             
             # Weight per 1000 Price
-            efficiency_frame = tk.Frame(content_frame)
+            efficiency_frame = tk.Frame(content_frame, **Style.FRAME_NORMAL)
             efficiency_frame.pack(fill=tk.X)
             tk.Label(efficiency_frame, text=f"W/kP: {item.weight_per_1k:.1f}", 
-                    anchor="w").pack(side=tk.LEFT)
+                    anchor="w", **label_style).pack(side=tk.LEFT)
             
             # Category and Favorite status
             status_text = f"{item.category}"
             if item.favorite:
                 status_text += " ★"
             tk.Label(content_frame, text=status_text, 
-                    anchor="w").pack(fill=tk.X)
+                    anchor="w", **label_style).pack(fill=tk.X)
             
             # Effects
             if item.effects.strip():
                 tk.Label(content_frame, text=item.effects, anchor="w",
-                        wraplength=UIConstant.CARD_WIDTH-12).pack(fill=tk.X, pady=(1, 2))
+                        wraplength=UIConstant.CARD_WIDTH-12,
+                        **label_style).pack(fill=tk.X, pady=(1, 2))
             
             # Optional fields
             optional_text = []
@@ -186,12 +191,14 @@ class ItemList(tk.Frame):
                     optional_text.append(f"{field}: {value}")
             if optional_text:
                 tk.Label(content_frame, text=", ".join(optional_text),
-                        anchor="w", wraplength=UIConstant.CARD_WIDTH-12).pack(fill=tk.X, 
-                                                                 pady=(0, 2))
+                        anchor="w", wraplength=UIConstant.CARD_WIDTH-12,
+                        **label_style).pack(fill=tk.X, pady=(0, 2))
+        print(f"Finished creating {len(items)} cards")
 
     def _add_separator(self):
         """Add a separator line between sections."""
-        separator = tk.Frame(self.items_frame, height=2, bd=1, relief=tk.SUNKEN)
+        separator = tk.Frame(self.items_frame, height=2, bd=1, relief=tk.SUNKEN,
+                           bg=Style.BORDER)
         separator.pack(fill=tk.X, padx=5, pady=10)
 
     def refresh(self):
@@ -212,16 +219,4 @@ class ItemList(tk.Frame):
         
         if columns != self.current_columns:
             self.current_columns = columns
-            self.refresh()
-
-    def _on_frame_configure(self, event):
-        """Update the scroll region to encompass the inner frame."""
-        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
-    
-    def _on_canvas_configure(self, event):
-        """Resize the inner frame to match the canvas."""
-        self.canvas.itemconfig(self.canvas_frame, width=event.width)
-    
-    def _on_mousewheel(self, event):
-        """Handle mousewheel scrolling."""
-        self.canvas.yview_scroll(int(-1*(event.delta/120)), "units") 
+            self.refresh() 
