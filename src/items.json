@@ -7,8 +7,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 25.0,
-      "weight_per_1k": 25.0,
+      "Total Weight": 109.32,
+      "weight_per_1k": 109.32,
       "Weapon Lifesteal": 10
     },
     "Weapon Grease": {
@@ -18,8 +18,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 75.0,
-      "weight_per_1k": 75.0,
+      "Total Weight": 26.18,
+      "weight_per_1k": 26.18,
       "Attack Speed": 5
     },
     "Ammo Reserves": {
@@ -29,8 +29,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 17.0,
-      "weight_per_1k": 11.33,
+      "Total Weight": 8.74,
+      "weight_per_1k": 5.83,
       "Max Ammo": 20
     },
     "Frenzy Amp": {
@@ -50,8 +50,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 206.25,
-      "weight_per_1k": 55.0,
+      "Total Weight": 88.29,
+      "weight_per_1k": 23.54,
       "Attack Speed": 10,
       "Move Speed": 5
     },
@@ -62,8 +62,8 @@
       "Effects": "10% attack speed for 3s after healing.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 100.0,
-      "weight_per_1k": 25.0,
+      "Total Weight": 58.02,
+      "weight_per_1k": 14.51,
       "Weapon Power": 5
     },
     "Shieldbuster": {
@@ -73,8 +73,8 @@
       "Effects": "15% attack speed for 1s after damaging shields or armor.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 115.0,
-      "weight_per_1k": 28.75,
+      "Total Weight": 73.02,
+      "weight_per_1k": 18.26,
       "Weapon Power": 5
     },
     "Stockpile": {
@@ -84,8 +84,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 96.25,
-      "weight_per_1k": 24.06,
+      "Total Weight": 37.11,
+      "weight_per_1k": 9.28,
       "Attack Speed": 5,
       "Max Ammo": 25
     },
@@ -96,8 +96,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 125.0,
-      "weight_per_1k": 27.78,
+      "Total Weight": 167.34,
+      "weight_per_1k": 37.19,
       "Weapon Power": 5,
       "Weapon Lifesteal": 10
     },
@@ -108,8 +108,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 211.25,
-      "weight_per_1k": 42.25,
+      "Total Weight": 144.12,
+      "weight_per_1k": 28.82,
       "Weapon Power": 10,
       "Cooldown Reduction": 5
     },
@@ -120,8 +120,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 300.0,
-      "weight_per_1k": 54.55,
+      "Total Weight": 174.07,
+      "weight_per_1k": 31.65,
       "Weapon Power": 15
     },
     "Asa's Armaments": {
@@ -131,8 +131,8 @@
       "Effects": "Kunai bounce",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 155.0,
-      "weight_per_1k": 38.75,
+      "Total Weight": 57.36,
+      "weight_per_1k": 14.34,
       "Attack Speed": 10
     },
     "Farsight Focus Sash": {
@@ -142,8 +142,8 @@
       "Effects": "200% Ofuda Speed for 5 seconds after dealing damage.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 299.0,
-      "weight_per_1k": 59.8,
+      "Total Weight": 215.05,
+      "weight_per_1k": 43.01,
       "Weapon Power": 10,
       "Ability Lifesteal": 69
     },
@@ -154,8 +154,8 @@
       "Effects": "Healing allies grants them 10% move speed for 3s.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 215.0,
-      "weight_per_1k": 43.0,
+      "Total Weight": 131.05,
+      "weight_per_1k": 26.21,
       "Weapon Power": 10
     },
     "Codebreaker": {
@@ -165,8 +165,8 @@
       "Effects": "Ignore 50% of armor damage reduction.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 300.0,
-      "weight_per_1k": 33.33,
+      "Total Weight": 174.07,
+      "weight_per_1k": 19.34,
       "Weapon Power": 15
     },
     "Salvaged Slugs": {
@@ -176,8 +176,8 @@
       "Effects": "Barrier damage/ammo regen.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 150.0,
-      "weight_per_1k": 15.79,
+      "Total Weight": 52.36,
+      "weight_per_1k": 5.51,
       "Attack Speed": 10
     },
     "Volskaya Ordnance": {
@@ -187,8 +187,8 @@
       "Effects": "Increased damage vs heroes with more HP.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 160.0,
-      "weight_per_1k": 16.84,
+      "Total Weight": 62.36,
+      "weight_per_1k": 6.56,
       "Attack Speed": 10
     },
     "Commander's Clip": {
@@ -198,8 +198,8 @@
       "Effects": "Restore 10% ammo on ability use.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 184.0,
-      "weight_per_1k": 18.4,
+      "Total Weight": 69.85,
+      "weight_per_1k": 6.98,
       "Attack Speed": 10,
       "Max Ammo": 40
     },
@@ -210,8 +210,8 @@
       "Effects": "+10% attack speed for 2s on damage.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 296.25,
-      "weight_per_1k": 29.62,
+      "Total Weight": 331.7,
+      "weight_per_1k": 33.17,
       "Weapon Power": 10,
       "Armor": 25
     },
@@ -222,8 +222,8 @@
       "Effects": "15% extra healing to allies <50% HP.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 346.25,
-      "weight_per_1k": 31.48,
+      "Total Weight": 357.86,
+      "weight_per_1k": 32.53,
       "Weapon Power": 15,
       "Health": 25
     },
@@ -234,8 +234,8 @@
       "Effects": "+10% MS for 2s when you use an ability.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 300.0,
-      "weight_per_1k": 27.27,
+      "Total Weight": 104.72,
+      "weight_per_1k": 9.52,
       "Attack Speed": 20
     },
     "El-Sa'Ka Suppressor": {
@@ -245,8 +245,8 @@
       "Effects": "Crits apply DPS passive for 2s.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 200.0,
-      "weight_per_1k": 18.18,
+      "Total Weight": 116.05,
+      "weight_per_1k": 10.55,
       "Weapon Power": 10
     },
     "Hardlight Accel": {
@@ -256,8 +256,8 @@
       "Effects": "Up to 3 stacks of 5% WP for 3s after using an ability.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 222.5,
-      "weight_per_1k": 20.23,
+      "Total Weight": 172.2,
+      "weight_per_1k": 15.65,
       "Weapon Power": 10,
       "Cooldown Reduction": 10
     },
@@ -268,8 +268,8 @@
       "Effects": "Crits reveal target for 3s.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 452.5,
-      "weight_per_1k": 34.81,
+      "Total Weight": 281.67,
+      "weight_per_1k": 21.67,
       "Weapon Power": 20,
       "Critical Damage": 10
     },
@@ -280,8 +280,8 @@
       "Effects": "+10% damage vs <30% HP.",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 530.0,
-      "weight_per_1k": 39.26,
+      "Total Weight": 320.12,
+      "weight_per_1k": 23.71,
       "Weapon Power": 25
     },
     "Ryota's Reloader": {
@@ -302,8 +302,8 @@
       "Effects": "+100% Ofuda speed",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 345.0,
-      "weight_per_1k": 28.75,
+      "Total Weight": 219.07,
+      "weight_per_1k": 18.26,
       "Weapon Power": 15
     },
     "Charged Plating": {
@@ -323,8 +323,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 20.0,
-      "weight_per_1k": 20.0,
+      "Total Weight": 13.35,
+      "weight_per_1k": 13.35,
       "Ability Power": 10
     },
     "Shady Spectacles": {
@@ -345,8 +345,8 @@
       "Effects": "Gain 15% ult charge on death.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 51.25,
-      "weight_per_1k": 34.17,
+      "Total Weight": 188.79,
+      "weight_per_1k": 125.86,
       "Health": 25
     },
     "Custom Stock": {
@@ -356,8 +356,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 120.0,
-      "weight_per_1k": 32.0,
+      "Total Weight": 71.38,
+      "weight_per_1k": 19.03,
       "Weapon Power": 5,
       "Ability Power": 10
     },
@@ -368,8 +368,8 @@
       "Effects": "50 overhealth to allies on ult.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 71.25,
-      "weight_per_1k": 17.81,
+      "Total Weight": 205.47,
+      "weight_per_1k": 51.37,
       "Ability Power": 5,
       "Health": 25
     },
@@ -380,8 +380,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 30.0,
-      "weight_per_1k": 7.5,
+      "Total Weight": 23.35,
+      "weight_per_1k": 5.84,
       "Ability Power": 10,
       "Ability Lifesteal": 10
     },
@@ -402,8 +402,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 160.0,
-      "weight_per_1k": 40.0,
+      "Total Weight": 59.04,
+      "weight_per_1k": 14.76,
       "Ability Power": 5,
       "Attack Speed": 10
     },
@@ -414,8 +414,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 32.5,
-      "weight_per_1k": 6.5,
+      "Total Weight": 62.83,
+      "weight_per_1k": 12.57,
       "Ability Power": 5,
       "Cooldown Reduction": 10
     },
@@ -426,8 +426,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 40.0,
-      "weight_per_1k": 7.27,
+      "Total Weight": 26.71,
+      "weight_per_1k": 4.86,
       "Ability Power": 20
     },
     "Eye of the Yokai": {
@@ -437,8 +437,8 @@
       "Effects": "35% ULT DURATION",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 40.0,
-      "weight_per_1k": 10.0,
+      "Total Weight": 33.35,
+      "weight_per_1k": 8.34,
       "Ability Power": 10
     },
     "Cyclist Gloves": {
@@ -458,8 +458,8 @@
       "Effects": "Reduce CD of healing abilities by 5% for each person it heals.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 86.25,
-      "weight_per_1k": 8.62,
+      "Total Weight": 217.14,
+      "weight_per_1k": 21.71,
       "Ability Power": 10,
       "Health": 25
     },
@@ -470,8 +470,8 @@
       "Effects": "Ability healing gives +20% extra ult charge.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 40.0,
-      "weight_per_1k": 4.0,
+      "Total Weight": 30.03,
+      "weight_per_1k": 3.0,
       "Ability Power": 15
     },
     "Lumerica Fusion Drive": {
@@ -481,8 +481,8 @@
       "Effects": "Restore 50 armor or shield over 2s on ability use.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 152.5,
-      "weight_per_1k": 15.25,
+      "Total Weight": 381.34,
+      "weight_per_1k": 38.13,
       "Ability Power": 15,
       "Armor": 50
     },
@@ -493,8 +493,8 @@
       "Effects": "On damage or healing stack +5% Ability Power for 3s up to +25%",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 276.25,
-      "weight_per_1k": 27.62,
+      "Total Weight": 329.84,
+      "weight_per_1k": 32.98,
       "Weapon Power": 10,
       "Health": 25
     },
@@ -505,8 +505,8 @@
       "Effects": "None",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 31.25,
-      "weight_per_1k": 2.98,
+      "Total Weight": 41.43,
+      "weight_per_1k": 3.95,
       "Cooldown Reduction": 5,
       "Ability Power": 10
     },
@@ -517,8 +517,8 @@
       "Effects": "100 overhealth for 3s after ult",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 67.5,
-      "weight_per_1k": 6.14,
+      "Total Weight": 87.86,
+      "weight_per_1k": 7.99,
       "Cooldown Reduction": 10,
       "Ability Power": 20
     },
@@ -529,8 +529,8 @@
       "Effects": "TODO",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 66.25,
-      "weight_per_1k": 6.02,
+      "Total Weight": 197.14,
+      "weight_per_1k": 17.92,
       "Ability Power": 10,
       "Health": 25
     },
@@ -541,8 +541,8 @@
       "Effects": "25AP bonus damage or healing after using an ability.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 30.0,
-      "weight_per_1k": 2.73,
+      "Total Weight": 23.35,
+      "weight_per_1k": 2.12,
       "Ability Power": 10
     },
     "Champion's Kit": {
@@ -552,8 +552,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 80.0,
-      "weight_per_1k": 5.93,
+      "Total Weight": 53.41,
+      "weight_per_1k": 3.96,
       "Ability Power": 40
     },
     "Donut Delivery": {
@@ -563,8 +563,8 @@
       "Effects": "Swift step heals 80AP over 2s.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 40.0,
-      "weight_per_1k": 4.0,
+      "Total Weight": 33.35,
+      "weight_per_1k": 3.34,
       "Ability Power": 10
     },
     "Our Bikes": {
@@ -574,8 +574,8 @@
       "Effects": "80AP HP/s healing in ult.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 101.25,
-      "weight_per_1k": 10.12,
+      "Total Weight": 228.82,
+      "weight_per_1k": 22.88,
       "Ability Power": 15,
       "Health": 25
     },
@@ -586,8 +586,8 @@
       "Effects": "Suzu grants +25% AS and MS for 4s.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 70.0,
-      "weight_per_1k": 7.0,
+      "Total Weight": 60.03,
+      "weight_per_1k": 6.0,
       "Ability Power": 15
     },
     "Adrenaline Shot": {
@@ -597,8 +597,8 @@
       "Effects": "Health packs give move speed.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 19.5,
-      "weight_per_1k": 19.5,
+      "Total Weight": 74.52,
+      "weight_per_1k": 74.52,
       "Health": 10
     },
     "Electrolytes": {
@@ -628,8 +628,8 @@
       "Effects": "Move speed at start of round out of spawn.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 21.5,
-      "weight_per_1k": 21.5,
+      "Total Weight": 76.52,
+      "weight_per_1k": 76.52,
       "Health": 10
     },
     "Armored Vest": {
@@ -639,8 +639,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 56.25,
-      "weight_per_1k": 37.5,
+      "Total Weight": 175.65,
+      "weight_per_1k": 117.1,
       "Armor": 25
     },
     "First Aid Kit": {
@@ -650,8 +650,8 @@
       "Effects": "faster self heal",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 50.0,
-      "weight_per_1k": 33.33,
+      "Total Weight": 69.88,
+      "weight_per_1k": 46.58,
       "Shields": 25
     },
     "Heartbeat Sensor": {
@@ -661,8 +661,8 @@
       "Effects": "Opportunist passive",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 56.25,
-      "weight_per_1k": 37.5,
+      "Total Weight": 35.93,
+      "weight_per_1k": 23.95,
       "Move Speed": 5
     },
     "Siphon Gloves": {
@@ -672,8 +672,8 @@
       "Effects": "Melee damage heals 25 HP.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 47.25,
-      "weight_per_1k": 31.5,
+      "Total Weight": 184.79,
+      "weight_per_1k": 123.19,
       "Health": 25
     },
     "Reinforced Titanium": {
@@ -683,8 +683,8 @@
       "Effects": "-15% ability damage taken if you have shields.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 55.0,
-      "weight_per_1k": 14.67,
+      "Total Weight": 74.88,
+      "weight_per_1k": 19.97,
       "Shields": 25
     },
     "Cushioned Padding": {
@@ -694,8 +694,8 @@
       "Effects": "-40% CC duration + heal on CC",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 50.0,
-      "weight_per_1k": 12.5,
+      "Total Weight": 69.88,
+      "weight_per_1k": 17.47,
       "Shields": 25
     },
     "Ironclad Exhaust Ports": {
@@ -705,8 +705,8 @@
       "Effects": "25 overhealth for 3s on ability use.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 21.25,
-      "weight_per_1k": 5.31,
+      "Total Weight": 38.08,
+      "weight_per_1k": 9.52,
       "Cooldown Reduction": 5
     },
     "Vishkar Condensor": {
@@ -716,8 +716,8 @@
       "Effects": "Turn 100 HP to shield.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 75.0,
-      "weight_per_1k": 18.75,
+      "Total Weight": 94.88,
+      "weight_per_1k": 23.72,
       "Shields": 25
     },
     "Crusader Hydraulics": {
@@ -727,8 +727,8 @@
       "Effects": "10% reduced weapon damage when you have armor.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 71.25,
-      "weight_per_1k": 15.83,
+      "Total Weight": 190.65,
+      "weight_per_1k": 42.37,
       "Armor": 25
     },
     "Iron Eyes": {
@@ -738,8 +738,8 @@
       "Effects": "Reduced headshot damage received.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 50.0,
-      "weight_per_1k": 11.11,
+      "Total Weight": 69.88,
+      "weight_per_1k": 15.53,
       "Shields": 25
     },
     "Meka Z-Series": {
@@ -749,8 +749,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 48.8,
-      "weight_per_1k": 9.76,
+      "Total Weight": 137.38,
+      "weight_per_1k": 27.48,
       "Armor": 8,
       "Shields": 8,
       "Health": 8
@@ -762,8 +762,8 @@
       "Effects": "Double Jump",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 147.5,
-      "weight_per_1k": 36.88,
+      "Total Weight": 106.86,
+      "weight_per_1k": 26.72,
       "Move Speed": 10
     },
     "Genericist's Vial": {
@@ -773,8 +773,8 @@
       "Effects": "Self revive first death.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 61.25,
-      "weight_per_1k": 6.81,
+      "Total Weight": 198.79,
+      "weight_per_1k": 22.09,
       "Health": 25
     },
     "Bloodbound": {
@@ -784,8 +784,8 @@
       "Effects": "Reveal last killer and get +10% dmg and -10% dmg resist vs them.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 107.5,
-      "weight_per_1k": 11.32,
+      "Total Weight": 382.58,
+      "weight_per_1k": 40.27,
       "Health": 50
     },
     "Divine Intervention": {
@@ -795,8 +795,8 @@
       "Effects": "restore 15% of burst damage.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 120.0,
-      "weight_per_1k": 12.63,
+      "Total Weight": 159.75,
+      "weight_per_1k": 16.82,
       "Shields": 50
     },
     "GloomGauntlet": {
@@ -806,8 +806,8 @@
       "Effects": "Melee gives +10% move speed and heals 5% of your hp over 2s.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 152.5,
-      "weight_per_1k": 16.05,
+      "Total Weight": 391.31,
+      "weight_per_1k": 41.19,
       "Melee Damage": 15,
       "Armor": 50
     },
@@ -818,8 +818,8 @@
       "Effects": "Heal 3% HP/s",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 93.75,
-      "weight_per_1k": 9.38,
+      "Total Weight": 264.94,
+      "weight_per_1k": 26.49,
       "Cooldown Reduction": 10,
       "Health": 25
     },
@@ -830,8 +830,8 @@
       "Effects": "Lifesteal on full HP can give up to 100 overhealth",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 287.5,
-      "weight_per_1k": 28.75,
+      "Total Weight": 323.38,
+      "weight_per_1k": 32.34,
       "Weapon Power": 10,
       "Weapon Lifesteal": 15,
       "Ability Power": 10,
@@ -844,8 +844,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 97.6,
-      "weight_per_1k": 9.76,
+      "Total Weight": 274.76,
+      "weight_per_1k": 27.48,
       "Armor": 16,
       "Shields": 16,
       "Health": 16
@@ -857,8 +857,8 @@
       "Effects": "A bunch of stats when you hold ult.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 120.0,
-      "weight_per_1k": 12.0,
+      "Total Weight": 159.75,
+      "weight_per_1k": 15.98,
       "Shields": 50
     },
     "Nebula Conduit": {
@@ -868,8 +868,8 @@
       "Effects": "Prevent 15% of burst damage and take it over 3s.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 222.5,
-      "weight_per_1k": 20.23,
+      "Total Weight": 455.6,
+      "weight_per_1k": 41.42,
       "Weapon Power": 5,
       "Health": 50
     },
@@ -880,8 +880,8 @@
       "Effects": "Damage reduction for 1s when you get hit stacks up to 20%.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 137.5,
-      "weight_per_1k": 12.5,
+      "Total Weight": 376.31,
+      "weight_per_1k": 34.21,
       "Armor": 50
     },
     "Goddess's Aura": {
@@ -891,8 +891,8 @@
       "Effects": "100AP overhealth for 4s on Swift Step.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 71.25,
-      "weight_per_1k": 7.12,
+      "Total Weight": 208.79,
+      "weight_per_1k": 20.88,
       "Health": 25
     },
     "Talisman Of Life": {
@@ -902,8 +902,8 @@
       "Effects": "Suzu gives 100AP overhealth for 5s.",
       "Favorite": false,
       "Category": "Survival",
-      "Total Weight": 75.0,
-      "weight_per_1k": 6.82,
+      "Total Weight": 61.71,
+      "weight_per_1k": 5.61,
       "Ability Power": 20
     },
     "Compensator": {
@@ -913,8 +913,8 @@
       "Effects": "",
       "Favorite": false,
       "Category": "Weapon",
-      "Total Weight": 100.0,
-      "weight_per_1k": 100.0,
+      "Total Weight": 58.02,
+      "weight_per_1k": 58.02,
       "Weapon Power": 5
     },
     "Vital-E-Tee": {
@@ -924,8 +924,8 @@
       "Effects": "Turn 100 HP to Armor",
       "Favorite": true,
       "Category": "Survival",
-      "Total Weight": 72.5,
-      "weight_per_1k": 18.12,
+      "Total Weight": 120.26,
+      "weight_per_1k": 30.07,
       "Armor": 10
     },
     "three-tap Tommygun": {
@@ -935,8 +935,8 @@
       "Effects": "Extra %true damage after using an ability.",
       "Favorite": false,
       "Category": "Ability",
-      "Total Weight": 190.0,
-      "weight_per_1k": 20.0,
+      "Total Weight": 85.71,
+      "weight_per_1k": 9.02,
       "Attack Speed": 10,
       "Ability Power": 10
     }
@@ -946,19 +946,19 @@
       "Adjustment": 1.0,
       "Effect Value": 1.0,
       "Weapon Power": 1.0,
-      "Weapon Lifesteal": 2.5,
+      "Weapon Lifesteal": 1.0,
       "Attack Speed": 1.0,
       "Reload Speed": 1.0,
-      "Move Speed": 11.25,
-      "Critical Damage": 3.25,
+      "Move Speed": 1.0,
+      "Critical Damage": 1.0,
       "Melee Damage": 1.0,
-      "Max Ammo": 0.85,
-      "Cooldown Reduction": 2.25,
-      "Ability Power": 2.0,
+      "Max Ammo": 1.0,
+      "Cooldown Reduction": 1.0,
+      "Ability Power": 1.0,
       "Ability Lifesteal": 1.0,
-      "Armor": 2.25,
-      "Shields": 2.0,
-      "Health": 1.85
+      "Armor": 1.0,
+      "Shields": 1.0,
+      "Health": 1.0
     },
     "1 Weapon Power": {
       "Adjustment": 1.0,
@@ -979,7 +979,7 @@
       "Health": 1.0,
       "_min": 0.5,
       "_max": 10.0,
-      "_scale": 1.0,
+      "_scale": 0.3953488372093023,
       "_enabled": true
     },
     "2 Attack Speed": {
@@ -1001,7 +1001,7 @@
       "Health": 1.0,
       "_min": 0.67,
       "_max": 10.0,
-      "_scale": 1.0,
+      "_scale": 0.32558139534883723,
       "_enabled": true
     },
     "3 Move Speed": {
@@ -1023,8 +1023,8 @@
       "Health": 1.0,
       "_min": 0.5,
       "_max": 10.0,
-      "_scale": 0.5930232558139535,
-      "_enabled": false
+      "_scale": 0.24418604651162787,
+      "_enabled": true
     },
     "4 Cooldown Reduction": {
       "Adjustment": 1.0,
@@ -1045,8 +1045,8 @@
       "Health": 1.0,
       "_min": 0.67,
       "_max": 10.0,
-      "_scale": 0.03529411764705882,
-      "_enabled": false
+      "_scale": 0.35294117647058826,
+      "_enabled": true
     },
     "5 Ability Power": {
       "Adjustment": 1.0,
@@ -1067,8 +1067,8 @@
       "Health": 1.0,
       "_min": 0.67,
       "_max": 10.0,
-      "_scale": 0.046511627906976744,
-      "_enabled": false
+      "_scale": 0.313953488372093,
+      "_enabled": true
     },
     "6 Health": {
       "Adjustment": 1.0,
@@ -1089,8 +1089,8 @@
       "Health": 1.5,
       "_min": 0.67,
       "_max": 10.0,
-      "_scale": 0.09302325581395349,
-      "_enabled": false
+      "_scale": 0.06976744186046512,
+      "_enabled": true
     },
     "7 Shields": {
       "Adjustment": 1.0,
@@ -1111,7 +1111,7 @@
       "Health": 1.0,
       "_min": 0.67,
       "_max": 10.0,
-      "_scale": 0.08139534883720931,
+      "_scale": 0.11627906976744186,
       "_enabled": true
     },
     "8 Armor": {
@@ -1155,8 +1155,8 @@
       "Health": 1.0,
       "_min": 0.67,
       "_max": 10.0,
-      "_scale": 0.18604651162790697,
-      "_enabled": false
+      "_scale": 0.2558139534883721,
+      "_enabled": true
     },
     "Weapon Lifesteal": {
       "Adjustment": 1.0,
@@ -1177,8 +1177,8 @@
       "Health": 1.0,
       "_min": 0.67,
       "_max": 10.0,
-      "_scale": 0.06976744186046512,
-      "_enabled": false
+      "_scale": 0.08139534883720931,
+      "_enabled": true
     },
     "Max Ammo": {
       "Adjustment": 1.0,
@@ -1200,25 +1200,25 @@
       "_min": 0.2,
       "_max": 1.0,
       "_scale": 0.4069767441860465,
-      "_enabled": false
+      "_enabled": true
     }
   },
   "output_weights": {
-    "Shields": 4.288255813953489,
-    "Attack Speed": 15.0,
-    "Melee Damage": 1.0,
-    "Effect Value": 1.0,
-    "Critical Damage": 3.25,
-    "Adjustment": 1.0,
-    "Max Ammo": 0.85,
-    "Reload Speed": 1.0,
-    "Cooldown Reduction": 2.25,
-    "Weapon Power": 20.0,
-    "Weapon Lifesteal": 2.5,
-    "Move Speed": 11.25,
+    "Weapon Power": 8.511627906976745,
+    "Health": 1.9813953488372094,
+    "Attack Speed": 5.561511627906977,
+    "Armor": 3.283255813953488,
     "Ability Lifesteal": 1.0,
-    "Health": 1.85,
-    "Ability Power": 2.0,
-    "Armor": 7.3873255813953485
+    "Effect Value": 1.0,
+    "Critical Damage": 4.5851162790697675,
+    "Weapon Lifesteal": 2.1441279069767445,
+    "Melee Damage": 1.0,
+    "Max Ammo": 1.0511627906976746,
+    "Move Speed": 5.63953488372093,
+    "Adjustment": 1.0,
+    "Cooldown Reduction": 5.944411764705882,
+    "Shields": 2.6323255813953486,
+    "Reload Speed": 1.0,
+    "Ability Power": 5.398779069767442
   }
 }
