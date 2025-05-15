@@ -1,9 +1,9 @@
 import sys
 import subprocess
-from services.file_service import FileService
-from services.item_service import ItemService
-from services.optimizer import OptimizerService
-from ui.main_menu import MainMenu
+from src.services.file_service import FileService
+from src.services.item_service import ItemService
+from src.services.optimizer import OptimizerService
+from src.ui.main_menu import MainMenu
 
 
 def ensure_requirements():
