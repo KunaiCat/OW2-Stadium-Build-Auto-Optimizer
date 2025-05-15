@@ -5,7 +5,7 @@ import pybind11
 ext_modules = [
     Extension(
         'knapsack_optimizer_cpp',  # Name of the module to import in Python
-        ['knapsack.cpp'],        # List of C++ source files
+        ['src/cpp/knapsack.cpp'],  # Updated path to C++ source file
         include_dirs=[
             pybind11.get_include(), # Include directory for pybind11 headers
             # Add any other include directories your C++ code might need here
@@ -25,4 +25,5 @@ setup(
     # You might need to specify the pybind11 version if you install it via setup_requires
     # setup_requires=['pybind11>=2.6'], # Example
     zip_safe=False, # Recommended for C++ extensions
+    options={'build': {'build_base': 'build'}},  # Direct build outputs to build/ directory
 ) 

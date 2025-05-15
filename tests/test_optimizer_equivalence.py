@@ -2,11 +2,11 @@ import sys
 import os
 import pytest
 
-# Adjust path for local imports if running from project root
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+# Adjust path for local imports 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from services.optimizer import OptimizerService
-from models.item import Item
+from src.services.optimizer import OptimizerService
+from src.models.item import Item
 
 def test_empty_items():
     result = OptimizerService.find_optimal_items(1000, {})
@@ -52,8 +52,8 @@ def test_max_items_limit():
     assert result[1] <= 1000
 
 def test_realistic_case():
-    from services.item_service import ItemService
-    from services.file_service import FileService
+    from src.services.item_service import ItemService
+    from src.services.file_service import FileService
     item_service = ItemService(FileService())
     items = dict(list(item_service.items.items())[:10])  # First 10 items
     result = OptimizerService.find_optimal_items(5000, items)

@@ -1,8 +1,8 @@
 """Service for finding optimal item combinations."""
 
 from typing import Dict, List, Tuple
-from models.item import Item
-from utils.constants import GameConstant
+from src.models.item import Item
+from src.utils.constants import GameConstant
 
 # Try to import the C++ extension
 # This allows the module to still be imported if the C++ extension hasn't been built,
